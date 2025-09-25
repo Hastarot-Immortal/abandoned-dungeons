@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bplwjswntn1oe"]
+
+[ext_resource type="StyleBox" uid="uid://bhjek82vlw74t" path="res://assets/resources/start_page/button_box.tres" id="2_180ms"]
+[ext_resource type="Texture2D" uid="uid://4xvuj1k0y6hm" path="res://assets/sprites/back.png" id="2_bw6b1"]
+
+[node name="BackButton" type="Button"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 106.0
+offset_bottom = 93.0
+theme_override_styles/normal_mirrored = ExtResource("2_180ms")
+theme_override_styles/normal = ExtResource("2_180ms")
+icon = ExtResource("2_bw6b1")

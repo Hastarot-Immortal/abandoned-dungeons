@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqva05y8a3jhu"]
+
+[ext_resource type="Theme" uid="uid://uybdnmwkravd" path="res://assets/resources/start_page/button_theme.tres" id="1_dv1ew"]
+[ext_resource type="StyleBox" uid="uid://bhjek82vlw74t" path="res://assets/resources/start_page/button_box.tres" id="2_u5hon"]
+
+[node name="StartPageButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("1_dv1ew")
+theme_override_styles/normal_mirrored = ExtResource("2_u5hon")
+theme_override_styles/normal = ExtResource("2_u5hon")
+autowrap_mode = 2
+vertical_icon_alignment = 2

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgujib1eyyj3q"]
+
+[ext_resource type="Script" uid="uid://cw0yggklomp5" path="res://scripts/start_page.gd" id="1_mpx6a"]
+[ext_resource type="PackedScene" uid="uid://dqva05y8a3jhu" path="res://scenes/templates/start_page_button.tscn" id="2_ftwj8"]
+
+[node name="start_page" type="Node2D"]
+script = ExtResource("1_mpx6a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 1472.0
+offset_top = 128.0
+offset_right = 1792.0
+offset_bottom = 960.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="new_game_button" parent="VBoxContainer" instance=ExtResource("2_ftwj8")]
+layout_mode = 2
+text = "New Game"
+
+[node name="load_game_button" parent="VBoxContainer" instance=ExtResource("2_ftwj8")]
+layout_mode = 2
+text = "Load Game"
+
+[node name="settings_button" parent="VBoxContainer" instance=ExtResource("2_ftwj8")]
+layout_mode = 2
+text = "Settings"
+
+[node name="quit_button" parent="VBoxContainer" instance=ExtResource("2_ftwj8")]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/new_game_button" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/settings_button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]
