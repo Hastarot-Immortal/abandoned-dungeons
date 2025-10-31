@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5o7o7v8y8h13"]
+
+[ext_resource type="Script" uid="uid://du6etws0q7s06" path="res://scripts/game_states/game_world.gd" id="1_wp7kj"]
+[ext_resource type="Texture2D" uid="uid://d1uj5vqrpyasy" path="res://assets/sprites/floor.png" id="2_gsf3m"]
+[ext_resource type="Texture2D" uid="uid://xmw51nwanhof" path="res://assets/sprites/wall.png" id="3_xq640"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sj83s"]
+texture = ExtResource("2_gsf3m")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_po76a"]
+texture = ExtResource("3_xq640")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lhcav"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_sj83s")
+sources/1 = SubResource("TileSetAtlasSource_po76a")
+
+[node name="GameWorld" type="Node2D"]
+script = ExtResource("1_wp7kj")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(0.5, 0.5)
+tile_set = SubResource("TileSet_lhcav")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1072.0
+offset_top = 500.0
+offset_right = 1856.0
+offset_bottom = 990.0

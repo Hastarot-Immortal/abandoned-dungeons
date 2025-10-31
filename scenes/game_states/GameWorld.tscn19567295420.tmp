@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5o7o7v8y8h13"]
+
+[ext_resource type="Script" uid="uid://du6etws0q7s06" path="res://scripts/game_states/game_world.gd" id="1_wp7kj"]
+
+[node name="GameWorld" type="Node2D"]
+script = ExtResource("1_wp7kj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 147.0
+offset_top = 96.0
+offset_right = 1877.0
+offset_bottom = 792.0
+theme_override_font_sizes/font_size = 30

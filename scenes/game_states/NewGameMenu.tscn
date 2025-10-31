@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnbna16b32sj5"]
+
+[ext_resource type="Script" uid="uid://okpnefdfdwkb" path="res://scripts/game_states/new_game_menu.gd" id="1_cs4h2"]
+[ext_resource type="PackedScene" uid="uid://bplwjswntn1oe" path="res://scenes/templates/BackButton.tscn" id="2_x0uit"]
+
+[node name="NewGameMenu" type="Node2D"]
+script = ExtResource("1_cs4h2")
+
+[node name="BackButton" parent="." instance=ExtResource("2_x0uit")]
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

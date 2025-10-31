@@ -1,16 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkrmtmmv8i775"]
 
-[ext_resource type="Script" uid="uid://csxv7741f4umm" path="res://scripts/settings_page.gd" id="1_myfk7"]
-[ext_resource type="PackedScene" uid="uid://bplwjswntn1oe" path="res://scenes/templates/back_button.tscn" id="2_nb64h"]
+[ext_resource type="Script" uid="uid://csxv7741f4umm" path="res://scripts/game_states/settings_menu.gd" id="1_myfk7"]
+[ext_resource type="PackedScene" uid="uid://bplwjswntn1oe" path="res://scenes/templates/BackButton.tscn" id="2_nb64h"]
 [ext_resource type="FontFile" uid="uid://krxwneoopk" path="res://assets/fonts/venera.otf" id="3_nb64h"]
 
-[node name="settings_page" type="Node2D"]
+[node name="SettingsMenu" type="Node2D"]
 script = ExtResource("1_myfk7")
 
 [node name="BackButton" parent="." instance=ExtResource("2_nb64h")]
 
 [node name="GridContainer" type="GridContainer" parent="."]
-anchors_preset = -1
 offset_left = 192.0
 offset_top = 128.0
 offset_right = 1728.0

@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 
 func _on_back_button_pressed() -> void:
 	Settings.save_settings()
-	get_tree().change_scene_to_file("res://scenes/start_page.tscn")
+	get_tree().change_scene_to_file(Path.GAME_STATES + "StartMenu.tscn")
 
 func _on_mute_button_pressed() -> void:
 	Settings.audio["mute"] = !Settings.audio["mute"]

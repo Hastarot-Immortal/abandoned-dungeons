@@ -1,11 +1,11 @@
 extends Node
 
-const SETTINGS_PATH = "user://settings.cfg"
+
 var audio: Dictionary
 
 func load_settings():
 	var config = ConfigFile.new()
-	var status = config.load(SETTINGS_PATH)
+	var status = config.load(Path.SETTINGS)
 	
 	if status == OK:
 		audio = {
@@ -27,4 +27,4 @@ func save_settings():
 	config.set_value("Audio", "sfx_volume", audio["sfx_volume"])
 	config.set_value("Audio", "mute", audio["mute"])
 	
-	config.save(SETTINGS_PATH)
+	config.save(Path.SETTINGS)
